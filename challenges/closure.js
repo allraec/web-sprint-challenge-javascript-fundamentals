@@ -16,7 +16,7 @@ function myFunction() {
 }
 myFunction();
 
-// Explanation: 
+// Explanation: Because of lexical scope, it means nested functions have access to variables and other assets of their parent scope.
 
 
 /* Task 2: Counter */
@@ -25,9 +25,11 @@ myFunction();
 
 function summation(num){
   let summ = 0;
-
   for(let i = 1; i<=num; i++){
-    summ += i;
+    function summati0n(){
+      summ += i;
+   }
+   summati0n();
   }
   return summ;
 }
